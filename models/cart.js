@@ -10,13 +10,8 @@ module.exports= class Cart{
      fs.readFile(p, (err, fileContent)=>{
         let cart = {products:[], totalPrice:0};
         if (!err) {
-        
                 cart = JSON.parse(fileContent);
-          
         }
-
-        
-      
         const existingProductIndex =cart.products.findIndex(prod=>prod.id === id);
         const existingProduct = cart.products[existingProductIndex]
 
